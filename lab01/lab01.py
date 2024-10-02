@@ -41,7 +41,15 @@ def falling(n, k):
     >>> falling(4, 0)
     1
     """
-    "*** YOUR CODE HERE ***"
+    
+    sum = 1
+
+    while k != 0:
+        sum *= n
+        n -= 1
+        k -= 1
+
+    return sum
 
 
 def divisible_by_k(n, k):
@@ -65,6 +73,18 @@ def divisible_by_k(n, k):
     0
     """
     "*** YOUR CODE HERE ***"
+
+    result = 0
+    i = 1
+
+    while i <= n:
+        if i % k == 0:
+            print(i)
+            result += 1
+
+        i += 1
+
+    return result
 
 
 def sum_digits(y):
