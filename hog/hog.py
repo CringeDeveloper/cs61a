@@ -277,7 +277,19 @@ def max_scoring_num_rolls(dice=six_sided, times_called=1000):
     1
     """
     # BEGIN PROBLEM 9
-    "*** YOUR CODE HERE ***"
+    top_scroll = 0
+    top_num_scroll = 0
+    i_cube = make_averaged(roll_dice, times_called)
+
+    i = 1
+    while i <= 10:
+        score = i_cube(i, dice)
+        if score > top_scroll:
+            top_scroll = score
+            top_num_scroll = i
+        i += 1
+
+    return top_num_scroll
     # END PROBLEM 9
 
 
