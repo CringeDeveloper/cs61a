@@ -56,6 +56,13 @@ def digit_distance(n):
     True
     """
     "*** YOUR CODE HERE ***"
+    def digit_iter(n, sum):
+        if n < 11:
+            return sum
+        else:
+            return digit_iter(n // 10, sum + abs((n % 10) - (n % 100 // 10)))
+
+    return digit_iter(n, 0)
 
 
 def interleaved_sum(n, odd_func, even_func):
