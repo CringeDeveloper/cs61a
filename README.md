@@ -1,7 +1,8 @@
-**CS61a 2020 fall**
+**CS61a 2024 fall**
 
 Assigments: https://cs61a.org/
 
+2022 (outdated)
 [Lecture 2](https://www.youtube.com/watch?v=0kQKzc2yQQs&list=PL6BsET-8jgYUOR-QB-3KBQBgnQMGfGPb4&pp=iAQB)
 [Lecture 3](https://www.youtube.com/watch?v=T_nf9Uxai8w&list=PL6BsET-8jgYXytPK09lJ5y9iUqZ445lCX&pp=iAQB)
 [Lecture 4](https://www.youtube.com/watch?v=SsznmbwosLQ&list=PL6BsET-8jgYXeefqDPnwLJ03jyw5-KKTT&pp=iAQB)
