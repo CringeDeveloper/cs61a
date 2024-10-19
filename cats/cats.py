@@ -39,10 +39,11 @@ def pick(paragraphs, select, k):
     # BEGIN PROBLEM 1
     index = 0
     for v in paragraphs:
-        if select(v) and index == k:
+        if not select(v):
+            continue
+        if index == k:
             return v
-        elif select(v):
-            index += 1
+        index += 1
     return ''
     # END PROBLEM 1
 
