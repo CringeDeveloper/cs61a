@@ -188,7 +188,22 @@ def autocorrect(typed_word, word_list, diff_function, limit):
     'testing'
     """
     # BEGIN PROBLEM 5
-    "*** YOUR CODE HERE ***"
+    min_diff = limit + 1
+    word_id = None
+    for i, word in enumerate(word_list):
+        if typed_word == word:
+            return typed_word
+
+        diff_result = diff_function(typed_word, word, limit)
+        if diff_result > limit:
+            continue
+        if diff_result < min_diff:
+            min_diff = diff_result
+            word_id = i
+
+    if word_id == None:
+        return typed_word
+    return word_list[word_id]
     # END PROBLEM 5
 
 
