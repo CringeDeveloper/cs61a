@@ -230,7 +230,18 @@ def furry_fixes(typed, source, limit):
     5
     """
     # BEGIN PROBLEM 6
-    assert False, 'Remove this line'
+    shortest = min(len(typed), len(source))
+    def furry_iter(typed, source, limit, i, counter):
+        if counter > limit:
+            return counter
+        if i == shortest:
+            return counter + abs(len(typed) - len(source))
+        else:
+            if typed[i] != source[i]:
+                return furry_iter(typed, source, limit, i+1, counter+1)
+            else:
+                return furry_iter(typed, source, limit, i+1, counter)
+    return furry_iter(typed, source, limit, 0, 0)
     # END PROBLEM 6
 
 
