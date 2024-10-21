@@ -145,6 +145,16 @@ def count_dollars(total):
     True
     """
     "*** YOUR CODE HERE ***"
+    def count_iter(total, m):
+        if total == 0:
+            return 1
+        elif total < 0:
+            return 0
+        elif m == 1:
+            return 1
+        else:
+            return count_iter(total, next_smaller_dollar(m)) + count_iter(total-m, m)
+    return count_iter(total, 100)
 
 
 def next_larger_dollar(bill):
