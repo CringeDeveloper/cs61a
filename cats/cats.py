@@ -334,7 +334,15 @@ def report_progress(typed, source, user_id, upload):
     0.2
     """
     # BEGIN PROBLEM 8
-    "*** YOUR CODE HERE ***"
+    correct = 0
+    for i in range(len(typed)):
+        if typed[i] == source[i]:
+            correct += 1
+        else:
+            break
+    result = correct / len(source)
+    upload(dict(id=user_id, progress=result))
+    return result
     # END PROBLEM 8
 
 
