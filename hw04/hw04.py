@@ -161,7 +161,13 @@ def max_path_sum(t):
     17
     """
     "*** YOUR CODE HERE ***"
-
+    if is_leaf(t):
+        return label(t)
+    else:
+        arr = []
+        for b in branches(t):
+            arr.append(max_path_sum(b))
+        return max(arr) + label(t)
 
 def mobile(left, right):
     """Construct a mobile from a left arm and a right arm."""
