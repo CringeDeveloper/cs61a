@@ -137,6 +137,15 @@ def berry_finder(t):
     True
     """
     "*** YOUR CODE HERE ***"
+    if label(t) == 'berry':
+        return True
+    if is_leaf(t):
+        return False
+    else:
+        arr = []
+        for b in branches(t):
+            arr.append(berry_finder(b))
+        return any(arr)
 
 
 HW_SOURCE_FILE=__file__
