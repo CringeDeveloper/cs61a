@@ -48,12 +48,12 @@ def group_by(s, fn):
     {9: [-3, 3], 4: [-2, 2], 1: [-1, 1], 0: [0]}
     """
     grouped = {}
-    for ____ in ____:
-        key = ____
+    for _, e in enumerate(s):
+        key = fn(e)
         if key in grouped:
-            ____
+            grouped[key].append(e)
         else:
-            grouped[key] = ____
+            grouped[key] = [e]
     return grouped
 
 
