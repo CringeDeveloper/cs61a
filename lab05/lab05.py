@@ -110,6 +110,17 @@ def repeated(t, k):
     """
     assert k > 1
     "*** YOUR CODE HERE ***"
+    val = 0
+    res = 0
+    while (i := next(t, None)) is not None:
+        if i == val:
+            res += 1
+        else:
+            val = i
+            res = 1
+        
+        if res == k:
+            return i
 
 
 def sprout_leaves(t, leaves):
