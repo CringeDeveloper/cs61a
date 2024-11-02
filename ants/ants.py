@@ -140,6 +140,7 @@ class Ant(Insect):
 class HarvesterAnt(Ant):
     """HarvesterAnt produces 1 additional food per turn for the colony."""
 
+    food_cost = 2
     name = 'Harvester'
     implemented = True
     # OVERRIDE CLASS ATTRIBUTES HERE
@@ -150,13 +151,14 @@ class HarvesterAnt(Ant):
         gamestate -- The GameState, used to access game state information.
         """
         # BEGIN Problem 1
-        "*** YOUR CODE HERE ***"
+        gamestate.food = gamestate.food + 1
         # END Problem 1
 
 
 class ThrowerAnt(Ant):
     """ThrowerAnt throws a leaf each turn at the nearest Bee in its range."""
 
+    food_cost = 3
     name = 'Thrower'
     implemented = True
     damage = 1
